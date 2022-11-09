@@ -1,0 +1,132 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "jest",
+    "import",
+    "unused-imports"
+  ],
+  "extends": [
+    "plugin:import/recommended",
+    "plugin:jest/recommended",
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.{js,jsx}"
+      ],
+      "rules": {
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              [
+                "parent",
+                "sibling"
+              ],
+              "index",
+              "object",
+              "type"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "./**/**\\.css",
+                "group": "type",
+                "position": "after"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": [
+              "builtin"
+            ],
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            },
+            "newlines-between": "always",
+            "warnOnUnassignedImports": true
+          }
+        ]
+      }
+    }
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions":0,
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "no-unused-vars": "off",
+    "react/function-component-definition": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0,
+    "semi": "error",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "index", "sibling"]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "*.svg",
+            "group": "sibling",
+            "position": "after"
+          },
+          {
+            "pattern": "*.svg",
+            "group": "sibling",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "sort-imports":
+    [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ]
+  },
+  "settings": {
+    // Refer @hadeshe packages as internal for import/order rule
+    "import/internal-regex": "^@hadeshe/",
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".svg", ".json"]
+  }
+}
