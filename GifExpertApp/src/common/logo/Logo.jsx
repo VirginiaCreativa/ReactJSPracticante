@@ -2,14 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const LogoStyle = styled.img`
-  height: ${({ size }) => size || '50px'};
+const BoxIcon = styled.div`
+  .bx {
+    font-size: ${({ size }) => size || '50px'};
+  }
 `;
-const Logo = () => {
+const Logo = ({ size }) => {
   return (
-    <>
-      <LogoStyle src="https://cdn-icons-png.flaticon.com/512/5170/5170996.png" alt="logo" />
-    </>
+    <BoxIcon>
+      <i className='bx bx-collapse-alt' size={size}></i>
+    </BoxIcon>
   );
 }
 
