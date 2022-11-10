@@ -1,11 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 
 
 const LayoutStyled = styled.div`
-  
 `;
 
 const Wrapper = styled.div`

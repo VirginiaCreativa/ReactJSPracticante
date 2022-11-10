@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../common/logo/Logo';
 import Search from '../search/Search';
