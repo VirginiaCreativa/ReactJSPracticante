@@ -1,10 +1,11 @@
-function App() {
+import Layout from './layouts/Layout';
 
+function App() {
   return (
-    <div className="App">
-      <h1> Hola</h1>
+    <div>
+      <Layout />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
