@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../common/logo/Logo';
 import Variable from '../../styles/variable';
+import Search from '../search/Search';
 
 const HeaderStyled = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px;
+  padding-top: 60px;
+  padding-bottom: 20px;
   h1 {
     font-weight: 700;
     margin-left: 10px;
@@ -19,10 +21,13 @@ const HeaderStyled = styled.header`
 
 function Header() {
   return (
-    <HeaderStyled>
-      <Logo size='70px' />
-      <h1>GifExpert</h1>
-    </HeaderStyled>
+    <div className='container'>
+      <HeaderStyled>
+        <Logo size='70px' />
+        <h1>GifExpert</h1>
+      </HeaderStyled>
+      <Search />
+    </div>
   );
 }
 

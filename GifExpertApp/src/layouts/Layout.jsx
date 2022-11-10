@@ -2,19 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from './header/Header';
 
-const Wrapper = styled.div`
+const LayoutStyled = styled.div`
+  
+`;
 
+const Wrapper = styled.div`
+  
 `;
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <LayoutStyled>
       <Header />
-      <Wrapper>
+      <Wrapper >
         {children}
       </Wrapper>
 
-    </div>
+    </LayoutStyled>
   );
 }
 
