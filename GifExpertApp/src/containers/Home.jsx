@@ -1,8 +1,9 @@
-
+import React from 'react';
+import GifsComponent from '../components/gifs/GifsComponent';
 const Home = () => {
   return (
     <>
-      <p>Gif items</p>
+      <GifsComponent></GifsComponent>
     </>
   );
 }
