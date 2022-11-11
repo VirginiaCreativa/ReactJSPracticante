@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import CardItem from '../../common/Cards/Card_iTem';
-import Title from '../../common/Title';
+import { CardItem, Title } from '../../common/common';
 
 
 const GifsComponent = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const TitleBox = styled.div`
@@ -8,14 +7,10 @@ const TitleBox = styled.div`
     font-weight: 600;
   }
 `;
-const Title = ({ title }) => {
-
-
+export const Title = ({ title }) => {
   return (
     <TitleBox>
       <h1>{title}</h1>
     </TitleBox>
   );
 }
-
-export default Title;

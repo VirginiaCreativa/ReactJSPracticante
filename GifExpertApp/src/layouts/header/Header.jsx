@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Logo from '../../common/logo/Logo';
+import Logo from '../../common/logo';
 import Search from '../search/Search';
 
 const HeaderStyled = styled.header`

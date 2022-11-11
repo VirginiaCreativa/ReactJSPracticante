@@ -1,6 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import Variable from '../../styles/variable';
+import Variable from '../styles/variable';
 
 const BoxIcon = styled.div`
   display: flex;
@@ -15,7 +14,7 @@ const BoxIcon = styled.div`
     color: ${Variable.orange_1}
   }
 `;
-const Logo = ({ size }) => {
+export const Logo = ({ size }) => {
   return (
     <BoxIcon>
       <i className='bx bx-collapse-alt' size={size}></i>
@@ -24,4 +23,3 @@ const Logo = ({ size }) => {
   );
 }
 
-export default Logo;

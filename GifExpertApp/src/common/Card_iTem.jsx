@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const BoxCard = styled.div`
@@ -18,7 +17,7 @@ const BoxCard = styled.div`
     font-size: 1.2rem;
   }
 `;
-const CardItem = ({ title }) => {
+export const CardItem = ({ title }) => {
   return (
     <>
       <BoxCard>
@@ -28,5 +27,3 @@ const CardItem = ({ title }) => {
     </>
   );
 }
-
-export default CardItem;
