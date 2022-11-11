@@ -7,10 +7,11 @@ export const searchSlice = createSlice({
   },
   reducers: {
     setPalabraSearch: (state, action) => {
-      state.palabra = actions.payload
+      state.palabra = action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { palabraSearch } = searchSlice.actions;
+export const { setPalabraSearch } = searchSlice.actions;
+export default searchSlice.reducer;
