@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+
+  palabra: 'Goku',
+}
+
 export const searchSlice = createSlice({
   name: 'search',
-  initialState: {
-    palabra: 'Goku',
-  },
+  initialState,
   reducers: {
     setPalabraSearch: (state, action) => {
       state.palabra = action.payload

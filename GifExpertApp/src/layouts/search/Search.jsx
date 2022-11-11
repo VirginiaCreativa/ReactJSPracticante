@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setPalabraSearch } from '../../redux/slices/Search.Slice';
 
@@ -24,10 +24,6 @@ const Search = ({ value }) => {
     ev.preventDefault()
     dispatch(setPalabraSearch(inputValue));
   }
-
-
-  useEffect(() => {
-  });
 
   return (
     <div className='d-flex justify-content-center'>
