@@ -10,6 +10,7 @@ const HeaderStyled = styled.header`
   align-items: center;
   padding-top: 60px;
   padding-bottom: 40px;
+  margin-bottom: 40px;
 `;
 
 

@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import styled from 'styled-components';
 
 const SearchStyled = styled.input`
@@ -13,9 +15,14 @@ const SearchStyled = styled.input`
 `;
 
 const Search = ({ value }) => {
+  const [inputValue, setInputValue] = useState('');
+
+
   return (
     <div className='d-flex justify-content-center'>
-      <SearchStyled type="text" placeholder='Buscador' value={value} />
+      <form onSubmit={ev => { ev.preventDefault() }}>
+        <SearchStyled type="text" placeholder='Buscador' value={inputValue} onChange={ev => setInputValue(ev.target.value)} />
+      </form>
     </div>
   );
 }

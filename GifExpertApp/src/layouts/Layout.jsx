@@ -7,7 +7,6 @@ const LayoutStyled = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 40px 0;
   height: 70vh ;
 `;
 

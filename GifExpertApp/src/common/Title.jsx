@@ -1,13 +1,20 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-const Title = () => {
+import styled from 'styled-components';
 
-  const palabra = useSelector(state => state.palabra);
+const TitleBox = styled.div`
+  display: flex;
+  justify-content: center;
+  h1 {
+    font-weight: 600;
+  }
+`;
+const Title = ({ title }) => {
+
 
   return (
-    <>
-      <h2>fdfds</h2>
-    </>
+    <TitleBox>
+      <h1>{title}</h1>
+    </TitleBox>
   );
 }
 

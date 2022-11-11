@@ -1,13 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Title from '../../common/Title';
 
 const GifsComponent = () => {
   const palabra = useSelector(state => state.search.palabra);
 
   return (
-    <div>
-      <h2>{palabra}</h2>
-    </div>
+    <>
+      <Title title={palabra}></Title>
+    </>
   );
 }
 
