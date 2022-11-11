@@ -10,6 +10,8 @@ export const searchSlice = createSlice({
   initialState,
   reducers: {
     setPalabraSearch: (state, action) => {
+      // const validaState = () => state.palabra.includes(action.payload);
+      // console.log(validaState());
       state.palabra = action.payload
     },
   },
