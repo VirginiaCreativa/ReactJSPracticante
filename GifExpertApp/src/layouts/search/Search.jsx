@@ -24,7 +24,7 @@ const Search = ({ value }) => {
   const handleOnSubmit = (ev) => {
     ev.preventDefault()
     dispatch(setPalabraSearch(inputValue));
-    dispatch(setCategory(inputValue));
+    dispatch(setCategory(inputValue.toLowerCase()));
   }
 
   return (

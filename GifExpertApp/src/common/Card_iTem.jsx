@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const BoxCard = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3);
@@ -17,12 +18,12 @@ const BoxCard = styled.div`
     font-size: 1.2rem;
   }
 `;
-export const CardItem = ({ title }) => {
+export const CardItem = ({ title, image }) => {
   return (
     <>
       <BoxCard>
-        <img src="https://via.placeholder.com/300x200" alt="" />
-        <h4>{title = 'Desconocido'}</h4>
+        <img src={image} alt={title} />
+        <h4>{title || 'Desconocido'}</h4>
       </BoxCard>
     </>
   );
