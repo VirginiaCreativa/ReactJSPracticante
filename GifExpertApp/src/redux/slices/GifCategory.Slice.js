@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-
-const apiGiphy = 'je7Uki80N76g8oUO4BjTzl4UgHESjMeA'
+import { apiKey } from '../../keys/apiGiphy';
 
 const initialState = {
   categories: [],
@@ -23,8 +22,8 @@ export const GifCategory = createSlice({
 
 export const FetchCategoriesApi = () => async (dispatch) => {
   try {
-    const resp = await axios.get(`api.giphy.com/v1/gifs/search?api_key=${apiGiphy}`).then((res) => {
-      dispatch(console.log(res.data))
+    const resp = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${setCategory}&api_key=${apiKey}`).then((res) => {
+      dispatch(setCategories(res.data.data))
     })
     return resp;
   } catch (error) {
