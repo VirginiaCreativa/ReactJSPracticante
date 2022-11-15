@@ -10,16 +10,15 @@ const GridGifs = styled.div`
   gap: 20px;
 `;
 
-
 const GifsComponent = () => {
   const palabra = useSelector(state => state.search.palabra);
-  const { categories } = useSelector(state => state.categores);
+  const { categories, category } = useSelector(state => state.categores);
   const dispatch = useDispatch();
 
 
   useEffect(() => {
-    dispatch(FetchCategoriesApi());
-  }, [dispatch]);
+    dispatch(FetchCategoriesApi(category));
+  }, []);
 
   return (
     <>

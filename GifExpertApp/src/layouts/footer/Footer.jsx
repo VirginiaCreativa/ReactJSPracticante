@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const FooterBox = styled.footer`
+  margin-top: 60px;
   p {
     font-size: 1rem;
   }

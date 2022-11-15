@@ -7,7 +7,7 @@ const LayoutStyled = styled.div`
 `;
 
 const Wrapper = styled.div`
-  height: 70vh ;
+
 `;
 
 const Layout = ({ children }) => {

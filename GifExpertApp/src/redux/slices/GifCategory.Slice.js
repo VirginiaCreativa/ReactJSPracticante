@@ -4,7 +4,6 @@ import { apiKey } from '../../keys/apiGiphy';
 
 const initialState = {
   categories: [],
-  category: 'Goku'
 }
 
 export const GifCategory = createSlice({
@@ -20,9 +19,9 @@ export const GifCategory = createSlice({
   },
 })
 
-export const FetchCategoriesApi = () => async (dispatch) => {
+export const FetchCategoriesApi = (setCategory) => async (dispatch) => {
   try {
-    const resp = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${setCategory}&api_key=${apiKey}&limit=11`).then((res) => {
+    const resp = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${setCategory || 'hello'}&api_key=${apiKey}&limit=11`).then((res) => {
       dispatch(setCategories(res.data.data))
     })
     return resp;

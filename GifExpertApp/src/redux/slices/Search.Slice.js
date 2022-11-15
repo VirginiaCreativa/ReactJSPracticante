@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  palabra: 'Goku',
+  palabra: 'Hello',
 }
 
 export const searchSlice = createSlice({
