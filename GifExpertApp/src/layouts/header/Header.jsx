@@ -13,7 +13,6 @@ const HeaderStyled = styled.header`
   margin-bottom: 40px;
 `;
 
-
 function Header() {
 
 
