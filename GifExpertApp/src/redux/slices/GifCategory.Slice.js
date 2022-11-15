@@ -4,7 +4,7 @@ import { apiKey } from '../../keys/apiGiphy';
 
 const initialState = {
   categories: [],
-  category: 'Goku'
+  category: ''
 }
 
 export const GifCategory = createSlice({

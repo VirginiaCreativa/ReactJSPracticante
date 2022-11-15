@@ -6,15 +6,13 @@ import { FetchCategoriesApi } from '../../redux/slices/GifCategory.Slice';
 
 const GifsComponent = () => {
   const palabra = useSelector(state => state.search.palabra);
-  const dispatch = useDispatch();
   const { categories } = useSelector(state => state.categores);
+  const dispatch = useDispatch();
 
 
   useEffect(() => {
-    dispatch(FetchCategoriesApi())
+    dispatch(FetchCategoriesApi());
   }, [dispatch]);
-
-  console.log(categories);
 
   return (
     <>
