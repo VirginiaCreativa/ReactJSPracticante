@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Logo from '../../common/logo';
+import { Logo } from '../../common/common';
 import Search from '../search/Search';
 
 const HeaderStyled = styled.header`
@@ -20,7 +20,7 @@ function Header() {
   return (
     <div className='container'>
       <HeaderStyled>
-        <Logo size='70px' />
+        <Logo size='80px'></Logo>
         <Search />
       </HeaderStyled>
     </div>
