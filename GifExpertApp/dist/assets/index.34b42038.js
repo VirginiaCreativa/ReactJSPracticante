@@ -151,7 +151,7 @@ Error generating stack: `+i.message+`
     color: #000;
     font-size: 1.2rem;
   }
-`,Bv=({title:e,image:t})=>H(ga,{children:go(Uv,{children:[H("img",{src:t,alt:e}),H("h4",{children:e||"Desconocido"})]})}),Hv="/assets/empty.66512dda.gif",Vv=St.div`
+`,Bv=({title:e,image:t})=>H(ga,{children:go(Uv,{children:[H("img",{src:t,alt:e}),H("h4",{children:e||"Desconocido"})]})}),Hv="https://virginiacreativa.github.io/ReactJSPracticante/GifExpertApp/assets/empty.66512dda.gif",Vv=St.div`
   display: flex;
   justify-content: center;
   justify-self: center;
