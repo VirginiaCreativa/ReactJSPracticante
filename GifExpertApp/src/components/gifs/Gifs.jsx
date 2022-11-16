@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { CardItem, Title } from '../../common/common';
+import { CardItem, Loading, Title } from '../../common/common';
 import { FetchCategoriesApi } from '../../redux/slices/GifCategory.Slice';
 
 const GridGifs = styled.div`
@@ -12,17 +12,18 @@ const GridGifs = styled.div`
 
 const GifsComponent = () => {
   const palabra = useSelector(state => state.search.palabra);
-  const { categories, category } = useSelector(state => state.categores);
+  const { categories, error } = useSelector(state => state.categores);
   const dispatch = useDispatch();
 
 
   useEffect(() => {
-    dispatch(FetchCategoriesApi(category));
+    dispatch(FetchCategoriesApi(palabra));
   }, []);
 
   return (
     <>
       <Title title={palabra}></Title>
+      <Loading></Loading>
       <GridGifs>
         {
           categories.map((item, index) =>

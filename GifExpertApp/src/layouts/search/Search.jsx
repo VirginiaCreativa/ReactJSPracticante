@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setCategory } from '../../redux/slices/GifCategory.Slice';
-import { setPalabraSearch } from '../../redux/slices/Search.Slice';
 import { FetchCategoriesApi } from '../../redux/slices/GifCategory.Slice';
+import { setPalabraSearch } from '../../redux/slices/Search.Slice';
 
 import styled from 'styled-components';
 
@@ -25,7 +24,6 @@ const Search = ({ value }) => {
   const handleOnSubmit = (ev) => {
     ev.preventDefault()
     dispatch(setPalabraSearch(inputValue));
-    dispatch(setCategory(inputValue.toLowerCase()));
     dispatch(FetchCategoriesApi(inputValue.toLowerCase()))
   }
 
