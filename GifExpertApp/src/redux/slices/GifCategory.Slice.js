@@ -27,7 +27,7 @@ export const GifCategory = createSlice({
 export const FetchCategoriesApi = (setCategory) => async (dispatch) => {
   try {
     dispatch(setCategoryLoading(true))
-    const resp = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${setCategory || 'hello'}&api_key=${apiKey}&limit=11`).then((res) => {
+    const resp = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${setCategory || 'hello'}&api_key=${apiKey}&limit=12`).then((res) => {
       dispatch(setCategories(res.data.data))
       const datas = res.data.data;
       if (datas.length === 0) {
