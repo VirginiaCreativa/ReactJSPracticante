@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { FetchCategoriesApi } from '../../redux/slices/GifCategory.Slice';
 import { setPalabraSearch } from '../../redux/slices/Search.Slice';
@@ -19,13 +19,14 @@ const SearchStyled = styled.input`
 
 const Search = ({ value }) => {
   const [inputValue, setInputValue] = useState('');
-
   const dispatch = useDispatch();
+
   const handleOnSubmit = (ev) => {
     ev.preventDefault()
     dispatch(setPalabraSearch(inputValue));
     dispatch(FetchCategoriesApi(inputValue.toLowerCase()))
   }
+
 
   return (
     <div className='d-flex justify-content-center'>

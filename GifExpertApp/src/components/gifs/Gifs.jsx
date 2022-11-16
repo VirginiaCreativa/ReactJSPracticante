@@ -12,22 +12,26 @@ const GridGifs = styled.div`
 
 const GifsComponent = () => {
   const palabra = useSelector(state => state.search.palabra);
-  const { categories, error } = useSelector(state => state.categores);
+  const { categories, loading, empty } = useSelector(state => state.categores);
   const dispatch = useDispatch();
 
 
   useEffect(() => {
     dispatch(FetchCategoriesApi(palabra));
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
       <Title title={palabra}></Title>
-      <Loading></Loading>
       <GridGifs>
         {
-          categories.map((item, index) =>
-            <CardItem title={item.title} key={index} image={item.images.preview_gif.url}></CardItem>
+          loading ? (
+            <Loading />
+          ) : (
+            categories && categories.map((item, index) =>
+              <CardItem title={item.title} key={index} image={item.images.preview_gif.url}></CardItem>
+            )
+
           )
         }
 
